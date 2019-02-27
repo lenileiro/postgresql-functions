@@ -2,7 +2,7 @@ import json
 from test.base import BaseTest
 from database.models.owner import OwnerModel
 
-class TestPostRequest(BaseTest):
+class TestOwnerCreation(BaseTest):
 
     def test_create_owner_1(self):
         user = {

@@ -2,7 +2,7 @@ import json
 from test.base import BaseTest
 from database.models.pet import PetModel
 
-class TestPostRequest(BaseTest):
+class TestPetCreation(BaseTest):
 
     def test_create_pet_1_owner_1(self):
         pet = {

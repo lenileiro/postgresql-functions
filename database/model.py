@@ -52,3 +52,5 @@ class Base:
             cur.execute(sql)
         except Exception as e:
             return f'user already exists'
+    
+   
