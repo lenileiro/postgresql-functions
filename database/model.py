@@ -47,6 +47,8 @@ class Base:
 
         keys = ','.join([key for key in data])
         values = str(tuple(data[key] for key in data))
-        sql = f"""INSERT INTO store.{table_name} ({keys}) VALUES {values}"""
-        cur.execute(sql)
-        return cur.fetchone()[0]
+        try:
+            sql = f"""INSERT INTO store.{table_name} ({keys}) VALUES {values}"""
+            cur.execute(sql)
+        except Exception as e:
+            return f'user already exists'
